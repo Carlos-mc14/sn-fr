@@ -110,8 +110,6 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <br />
-        <br />
       </section>
 
       {/* Map Section */}
