@@ -9,7 +9,11 @@ export default function ContactoPage() {
   return (
     <main className="min-h-screen py-20">
       <div className="max-w-6xl mx-auto px-4">
-        <h1 className="text-4xl font-display text-sanarte-green-dark mb-16 text-center">Contacto</h1>
+        <h1 className="text-4xl font-display text-sanarte-green-dark mb-4 text-center">Contacto</h1>
+        <p className="text-center text-stone-600 mb-16 max-w-2xl mx-auto">
+          Estamos aquí para responder tus preguntas y ayudarte a programar tu próxima visita a nuestro centro de
+          bienestar.
+        </p>
 
         <div className="grid md:grid-cols-2 gap-16">
           <div>
@@ -35,7 +39,7 @@ export default function ContactoPage() {
               <h2 className="text-2xl font-display text-sanarte-green-dark mb-8">Información de Contacto</h2>
 
               <div className="space-y-8">
-                <div className="bg-white p-8 shadow-sm flex items-start space-x-6">
+                <div className="bg-white p-8 shadow-sm flex items-start space-x-6 hover:shadow-md transition-shadow duration-300 border-l-4 border-sanarte-green">
                   <MapPin className="h-6 w-6 text-sanarte-green mt-1" />
                   <div>
                     <h3 className="font-display text-lg mb-2">Dirección</h3>
@@ -44,7 +48,7 @@ export default function ContactoPage() {
                   </div>
                 </div>
 
-                <div className="bg-white p-8 shadow-sm flex items-start space-x-6">
+                <div className="bg-white p-8 shadow-sm flex items-start space-x-6 hover:shadow-md transition-shadow duration-300 border-l-4 border-sanarte-green">
                   <Phone className="h-6 w-6 text-sanarte-green mt-1" />
                   <div>
                     <h3 className="font-display text-lg mb-2">Teléfono</h3>
@@ -52,7 +56,7 @@ export default function ContactoPage() {
                   </div>
                 </div>
 
-                <div className="bg-white p-8 shadow-sm flex items-start space-x-6">
+                <div className="bg-white p-8 shadow-sm flex items-start space-x-6 hover:shadow-md transition-shadow duration-300 border-l-4 border-sanarte-green">
                   <Mail className="h-6 w-6 text-sanarte-green mt-1" />
                   <div>
                     <h3 className="font-display text-lg mb-2">Email</h3>
@@ -76,7 +80,7 @@ export default function ContactoPage() {
                     <Input
                       id="nombre"
                       placeholder="Tu nombre"
-                      className="border-sanarte-beige-dark/30 focus:border-sanarte-green focus:ring-sanarte-green"
+                      className="border-sanarte-beige-dark/30 focus:border-sanarte-green focus:ring-sanarte-green transition-colors duration-300"
                     />
                   </div>
                   <div className="space-y-2">
@@ -86,7 +90,7 @@ export default function ContactoPage() {
                     <Input
                       id="apellido"
                       placeholder="Tu apellido"
-                      className="border-sanarte-beige-dark/30 focus:border-sanarte-green focus:ring-sanarte-green"
+                      className="border-sanarte-beige-dark/30 focus:border-sanarte-green focus:ring-sanarte-green transition-colors duration-300"
                     />
                   </div>
                 </div>
@@ -99,7 +103,7 @@ export default function ContactoPage() {
                     id="email"
                     type="email"
                     placeholder="tu@email.com"
-                    className="border-sanarte-beige-dark/30 focus:border-sanarte-green focus:ring-sanarte-green"
+                    className="border-sanarte-beige-dark/30 focus:border-sanarte-green focus:ring-sanarte-green transition-colors duration-300"
                   />
                 </div>
 
@@ -110,7 +114,7 @@ export default function ContactoPage() {
                   <Input
                     id="telefono"
                     placeholder="+51 955 329 677"
-                    className="border-sanarte-beige-dark/30 focus:border-sanarte-green focus:ring-sanarte-green"
+                    className="border-sanarte-beige-dark/30 focus:border-sanarte-green focus:ring-sanarte-green transition-colors duration-300"
                   />
                 </div>
 
@@ -122,11 +126,11 @@ export default function ContactoPage() {
                     id="mensaje"
                     placeholder="Escribe tu mensaje aquí..."
                     rows={5}
-                    className="border-sanarte-beige-dark/30 focus:border-sanarte-green focus:ring-sanarte-green"
+                    className="border-sanarte-beige-dark/30 focus:border-sanarte-green focus:ring-sanarte-green transition-colors duration-300"
                   />
                 </div>
 
-                <Button className="w-full bg-sanarte-green hover:bg-sanarte-green/90 text-white py-3">
+                <Button className="w-full bg-sanarte-green hover:bg-sanarte-green/90 text-white py-3 transition-all duration-300 hover:shadow-md">
                   Enviar Mensaje
                 </Button>
               </form>
@@ -137,3 +141,4 @@ export default function ContactoPage() {
     </main>
   )
 }
+

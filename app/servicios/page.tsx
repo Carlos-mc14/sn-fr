@@ -8,54 +8,60 @@ export default function ServiciosPage() {
   return (
     <main className="min-h-screen py-20">
       <div className="max-w-6xl mx-auto px-4">
-        <Link href="/" className="flex items-center text-sanarte-green mb-10 hover:underline">
+        <Link
+          href="/"
+          className="inline-flex items-center text-sanarte-green mb-10 hover:text-sanarte-green-dark transition-colors"
+        >
           <ArrowLeft className="mr-2 h-4 w-4" />
-          Volver a inicio
+          <span className="border-b border-transparent hover:border-sanarte-green transition-all">Volver a inicio</span>
         </Link>
 
-        <h1 className="text-4xl font-display text-sanarte-green-dark mb-16 text-center">Nuestros Servicios</h1>
+        <h1 className="text-4xl font-display text-sanarte-green-dark mb-4 text-center">Nuestros Servicios</h1>
+        <p className="text-center text-stone-600 mb-16 max-w-2xl mx-auto">
+          Descubre nuestra amplia gama de tratamientos diseñados para nutrir tu cuerpo, mente y espíritu.
+        </p>
 
         <Tabs defaultValue="masajes" className="w-full">
           <TabsList className="flex flex-wrap justify-center mb-12 bg-transparent">
             <TabsTrigger
               value="masajes"
-              className="data-[state=active]:bg-sanarte-green data-[state=active]:text-white px-6 py-3 rounded-none border-b-2 border-transparent data-[state=active]:border-sanarte-green"
+              className="data-[state=active]:bg-sanarte-green data-[state=active]:text-white px-6 py-3 rounded-none border-b-2 border-transparent data-[state=active]:border-sanarte-green transition-all duration-300 hover:text-sanarte-green"
             >
               Masajes
             </TabsTrigger>
             <TabsTrigger
               value="faciales"
-              className="data-[state=active]:bg-sanarte-green data-[state=active]:text-white px-6 py-3 rounded-none border-b-2 border-transparent data-[state=active]:border-sanarte-green"
+              className="data-[state=active]:bg-sanarte-green data-[state=active]:text-white px-6 py-3 rounded-none border-b-2 border-transparent data-[state=active]:border-sanarte-green transition-all duration-300 hover:text-sanarte-green"
             >
               Tratamientos Faciales
             </TabsTrigger>
             <TabsTrigger
               value="corporales"
-              className="data-[state=active]:bg-sanarte-green data-[state=active]:text-white px-6 py-3 rounded-none border-b-2 border-transparent data-[state=active]:border-sanarte-green"
+              className="data-[state=active]:bg-sanarte-green data-[state=active]:text-white px-6 py-3 rounded-none border-b-2 border-transparent data-[state=active]:border-sanarte-green transition-all duration-300 hover:text-sanarte-green"
             >
               Tratamientos corporales
             </TabsTrigger>
             <TabsTrigger
               value="terapias"
-              className="data-[state=active]:bg-sanarte-green data-[state=active]:text-white px-6 py-3 rounded-none border-b-2 border-transparent data-[state=active]:border-sanarte-green"
+              className="data-[state=active]:bg-sanarte-green data-[state=active]:text-white px-6 py-3 rounded-none border-b-2 border-transparent data-[state=active]:border-sanarte-green transition-all duration-300 hover:text-sanarte-green"
             >
               Terapias Holísticas
             </TabsTrigger>
             <TabsTrigger
               value="rituales"
-              className="data-[state=active]:bg-sanarte-green data-[state=active]:text-white px-6 py-3 rounded-none border-b-2 border-transparent data-[state=active]:border-sanarte-green"
+              className="data-[state=active]:bg-sanarte-green data-[state=active]:text-white px-6 py-3 rounded-none border-b-2 border-transparent data-[state=active]:border-sanarte-green transition-all duration-300 hover:text-sanarte-green"
             >
               Rituales
             </TabsTrigger>
             <TabsTrigger
               value="pestanas"
-              className="data-[state=active]:bg-sanarte-green data-[state=active]:text-white px-6 py-3 rounded-none border-b-2 border-transparent data-[state=active]:border-sanarte-green"
+              className="data-[state=active]:bg-sanarte-green data-[state=active]:text-white px-6 py-3 rounded-none border-b-2 border-transparent data-[state=active]:border-sanarte-green transition-all duration-300 hover:text-sanarte-green"
             >
               Pestañas y Cejas
             </TabsTrigger>
             <TabsTrigger
               value="depilacion"
-              className="data-[state=active]:bg-sanarte-green data-[state=active]:text-white px-6 py-3 rounded-none border-b-2 border-transparent data-[state=active]:border-sanarte-green"
+              className="data-[state=active]:bg-sanarte-green data-[state=active]:text-white px-6 py-3 rounded-none border-b-2 border-transparent data-[state=active]:border-sanarte-green transition-all duration-300 hover:text-sanarte-green"
             >
               Depilación Láser
             </TabsTrigger>
@@ -83,19 +89,107 @@ export default function ServiciosPage() {
           </TabsContent>
 
           <TabsContent value="terapias">
-            <p className="text-center py-16 text-stone-500 italic">Contenido de terapias holísticas próximamente</p>
+            <div className="text-center py-16 bg-white shadow-sm rounded-sm">
+              <div className="p-8">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="mx-auto text-sanarte-beige-dark mb-4"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 8v4"></path>
+                  <path d="M12 16h.01"></path>
+                </svg>
+                <p className="text-stone-500 italic">Contenido de terapias holísticas próximamente</p>
+                <p className="text-sm text-stone-400 mt-2">
+                  Estamos trabajando para ofrecerte más opciones de bienestar
+                </p>
+              </div>
+            </div>
           </TabsContent>
 
           <TabsContent value="rituales">
-            <p className="text-center py-16 text-stone-500 italic">Contenido de rituales próximamente</p>
+            <div className="text-center py-16 bg-white shadow-sm rounded-sm">
+              <div className="p-8">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="mx-auto text-sanarte-beige-dark mb-4"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 8v4"></path>
+                  <path d="M12 16h.01"></path>
+                </svg>
+                <p className="text-stone-500 italic">Contenido de rituales próximamente</p>
+                <p className="text-sm text-stone-400 mt-2">
+                  Estamos trabajando para ofrecerte más opciones de bienestar
+                </p>
+              </div>
+            </div>
           </TabsContent>
 
           <TabsContent value="pestanas">
-            <p className="text-center py-16 text-stone-500 italic">Contenido de pestañas y cejas próximamente</p>
+            <div className="text-center py-16 bg-white shadow-sm rounded-sm">
+              <div className="p-8">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="mx-auto text-sanarte-beige-dark mb-4"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 8v4"></path>
+                  <path d="M12 16h.01"></path>
+                </svg>
+                <p className="text-stone-500 italic">Contenido de pestañas y cejas próximamente</p>
+                <p className="text-sm text-stone-400 mt-2">Estamos trabajando para ofrecerte más opciones de belleza</p>
+              </div>
+            </div>
           </TabsContent>
 
           <TabsContent value="depilacion">
-            <p className="text-center py-16 text-stone-500 italic">Contenido de depilación láser próximamente</p>
+            <div className="text-center py-16 bg-white shadow-sm rounded-sm">
+              <div className="p-8">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="48"
+                  height="48"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="mx-auto text-sanarte-beige-dark mb-4"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 8v4"></path>
+                  <path d="M12 16h.01"></path>
+                </svg>
+                <p className="text-stone-500 italic">Contenido de depilación láser próximamente</p>
+                <p className="text-sm text-stone-400 mt-2">Estamos trabajando para ofrecerte más opciones de belleza</p>
+              </div>
+            </div>
           </TabsContent>
         </Tabs>
       </div>
@@ -113,10 +207,16 @@ interface Treatment {
 
 function TreatmentCard({ treatment }: { treatment: Treatment }) {
   return (
-    <div className="bg-white shadow-sm overflow-hidden">
+    <div className="bg-white shadow-sm overflow-hidden hover:shadow-md transition-all duration-300 rounded-sm">
       <div className="grid md:grid-cols-2">
-        <div className="relative h-64 md:h-auto">
-          <Image src={treatment.image || "/placeholder.svg"} alt={treatment.title} fill className="object-cover" />
+        <div className="relative h-64 md:h-auto overflow-hidden">
+          <Image
+            src={treatment.image || "/placeholder.svg"}
+            alt={treatment.title}
+            fill
+            className="object-cover transition-transform duration-500 hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
         </div>
         <div className="p-8">
           <h3 className="text-xl font-display mb-3 text-sanarte-green-dark">{treatment.title}</h3>
@@ -127,7 +227,7 @@ function TreatmentCard({ treatment }: { treatment: Treatment }) {
           </div>
           <Link
             href="#"
-            className="inline-block w-full text-center py-3 bg-sanarte-green text-white hover:bg-sanarte-green/90 transition-colors duration-300 text-sm tracking-wide"
+            className="inline-block w-full text-center py-3 bg-sanarte-green text-white hover:bg-sanarte-green/90 transition-all duration-300 text-sm tracking-wide hover:shadow-md"
           >
             Reservar
           </Link>

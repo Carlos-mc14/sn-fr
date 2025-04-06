@@ -5,15 +5,20 @@ export function SiteFooter() {
   return (
     <footer className="w-full bg-sanarte-green-dark text-white pt-16 pb-6">
       <div className="container mx-auto px-4">
-
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-center mb-12">
-          <div>
-            <h3 className="text-lg font-display mb-6">Ubicación</h3>
+          <div className="flex flex-col items-center">
+            <h3 className="text-lg font-display mb-6 relative inline-block">
+              <span className="relative z-10">Ubicación</span>
+              <span className="absolute bottom-0 left-0 right-0 h-1 bg-sanarte-beige/30 -mb-1"></span>
+            </h3>
             <p className="text-sanarte-beige font-light">Calle Chinchón 855, San Isidro, Lima, Provincia De Lima</p>
           </div>
 
-          <div>
-            <h3 className="text-lg font-display mb-6">Contacto</h3>
+          <div className="flex flex-col items-center">
+            <h3 className="text-lg font-display mb-6 relative inline-block">
+              <span className="relative z-10">Contacto</span>
+              <span className="absolute bottom-0 left-0 right-0 h-1 bg-sanarte-beige/30 -mb-1"></span>
+            </h3>
             <p className="text-sanarte-beige flex items-center justify-center mb-3 font-light">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -51,16 +56,25 @@ export function SiteFooter() {
             </p>
           </div>
 
-          <div>
-            <h3 className="text-lg font-display mb-6">Horarios de Atención</h3>
+          <div className="flex flex-col items-center">
+            <h3 className="text-lg font-display mb-6 relative inline-block">
+              <span className="relative z-10">Horarios de Atención</span>
+              <span className="absolute bottom-0 left-0 right-0 h-1 bg-sanarte-beige/30 -mb-1"></span>
+            </h3>
             <p className="text-sanarte-beige font-light">Lun a Vie: 08:00 am - 08:00 pm</p>
             <p className="text-sanarte-beige font-light">Sab: 09:00 am - 06:00 pm</p>
           </div>
 
-          <div>
-            <h3 className="text-lg font-display mb-6">Nuestras redes sociales</h3>
+          <div className="flex flex-col items-center">
+            <h3 className="text-lg font-display mb-6 relative inline-block">
+              <span className="relative z-10">Nuestras redes sociales</span>
+              <span className="absolute bottom-0 left-0 right-0 h-1 bg-sanarte-beige/30 -mb-1"></span>
+            </h3>
             <div className="flex justify-center space-x-6">
-              <Link href="#" className="hover:text-sanarte-beige transition-colors duration-300">
+              <Link
+                href="#"
+                className="hover:text-sanarte-beige transition-colors duration-300 transform hover:scale-110"
+              >
                 <Image
                   src="/redes/facebook.svg"
                   alt="Facebook"
@@ -69,7 +83,10 @@ export function SiteFooter() {
                   className="brightness-0 invert"
                 />
               </Link>
-              <Link href="#" className="hover:text-sanarte-beige transition-colors duration-300">
+              <Link
+                href="#"
+                className="hover:text-sanarte-beige transition-colors duration-300 transform hover:scale-110"
+              >
                 <Image
                   src="/redes/instagram.svg"
                   alt="Instagram"
@@ -78,7 +95,10 @@ export function SiteFooter() {
                   className="brightness-0 invert"
                 />
               </Link>
-              <Link href="#" className="hover:text-sanarte-beige transition-colors duration-300">
+              <Link
+                href="#"
+                className="hover:text-sanarte-beige transition-colors duration-300 transform hover:scale-110"
+              >
                 <Image
                   src="/redes/whatsapp.svg"
                   alt="Whatsapp"

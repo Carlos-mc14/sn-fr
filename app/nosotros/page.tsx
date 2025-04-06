@@ -4,17 +4,22 @@ export default function NosotrosPage() {
   return (
     <main className="min-h-screen py-20">
       <div className="max-w-6xl mx-auto px-4">
-        <h1 className="text-4xl font-display text-sanarte-green-dark mb-16 text-center">Nosotros</h1>
+        <h1 className="text-4xl font-display text-sanarte-green-dark mb-4 text-center">Nosotros</h1>
+        <p className="text-center text-stone-600 mb-16 max-w-2xl mx-auto">
+          Conoce nuestra historia, valores y al equipo que hace posible la experiencia Sanarte.
+        </p>
 
         <div className="grid md:grid-cols-2 gap-16 items-center mb-24">
-          <div>
+          <div className="relative">
+            <div className="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-sanarte-green opacity-50"></div>
             <Image
               src="/placeholder.svg?height=500&width=600"
               alt="Sanarte Wellness Center"
               width={600}
               height={500}
-              className="rounded-sm shadow-md"
+              className="rounded-sm shadow-md relative z-10"
             />
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-sanarte-green opacity-50"></div>
           </div>
           <div className="space-y-6">
             <h2 className="text-3xl font-display text-sanarte-green-dark">Nuestra Historia</h2>
@@ -32,11 +37,14 @@ export default function NosotrosPage() {
         </div>
 
         <div className="mb-24">
-          <h2 className="text-3xl font-display text-sanarte-green-dark mb-12 text-center">Nuestros Valores</h2>
+          <h2 className="text-3xl font-display text-sanarte-green-dark mb-4 text-center">Nuestros Valores</h2>
+          <p className="text-center text-stone-600 mb-12 max-w-2xl mx-auto">
+            Estos son los principios que guían nuestro trabajo diario.
+          </p>
 
           <div className="grid md:grid-cols-3 gap-10">
-            <div className="bg-white p-10 shadow-sm text-center">
-              <div className="w-16 h-16 bg-sanarte-beige rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="bg-white p-10 shadow-sm text-center hover:shadow-md transition-all duration-300 group">
+              <div className="w-16 h-16 bg-sanarte-beige rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-sanarte-green/10 transition-colors duration-300">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -59,8 +67,8 @@ export default function NosotrosPage() {
               </p>
             </div>
 
-            <div className="bg-white p-10 shadow-sm text-center">
-              <div className="w-16 h-16 bg-sanarte-beige rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="bg-white p-10 shadow-sm text-center hover:shadow-md transition-all duration-300 group">
+              <div className="w-16 h-16 bg-sanarte-beige rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-sanarte-green/10 transition-colors duration-300">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -83,8 +91,8 @@ export default function NosotrosPage() {
               </p>
             </div>
 
-            <div className="bg-white p-10 shadow-sm text-center">
-              <div className="w-16 h-16 bg-sanarte-beige rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="bg-white p-10 shadow-sm text-center hover:shadow-md transition-all duration-300 group">
+              <div className="w-16 h-16 bg-sanarte-beige rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-sanarte-green/10 transition-colors duration-300">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -112,13 +120,25 @@ export default function NosotrosPage() {
         </div>
 
         <div>
-          <h2 className="text-3xl font-display text-sanarte-green-dark mb-12 text-center">Nuestro Equipo</h2>
+          <h2 className="text-3xl font-display text-sanarte-green-dark mb-4 text-center">Nuestro Equipo</h2>
+          <p className="text-center text-stone-600 mb-12 max-w-2xl mx-auto">
+            Profesionales apasionados por tu bienestar.
+          </p>
 
           <div className="grid md:grid-cols-4 gap-8">
             {team.map((member) => (
-              <div key={member.name} className="bg-white overflow-hidden shadow-sm">
+              <div
+                key={member.name}
+                className="bg-white overflow-hidden shadow-sm group hover:shadow-md transition-all duration-300"
+              >
                 <div className="relative h-80">
-                  <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />
+                  <Image
+                    src={member.image || "/placeholder.svg"}
+                    alt={member.name}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 <div className="p-6 text-center">
                   <h3 className="font-display text-lg mb-1">{member.name}</h3>

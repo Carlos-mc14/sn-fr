@@ -14,8 +14,9 @@ export default function Home() {
           className="object-cover brightness-75"
           priority
         />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
         <div className="absolute inset-0 flex items-center justify-end p-8 md:p-16">
-          <div className="bg-black/40 backdrop-blur-sm p-8 max-w-md text-white rounded-sm mr-0 md:mr-10">
+          <div className="bg-black/40 backdrop-blur-sm p-8 max-w-md text-white rounded-sm mr-0 md:mr-10 border border-white/10">
             <h1 className="text-3xl font-display mb-6">Descubre Nuestros Servicios</h1>
             <ul className="space-y-4 font-light mb-8">
               <li className="flex items-center gap-3">
@@ -54,16 +55,18 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="py-24 px-4 md:px-8 max-w-6xl mx-auto">
+      <section className="py-20 px-4 md:px-8 max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
+          <div className="relative">
+            <div className="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-sanarte-green opacity-50"></div>
             <Image
               src="/sanarte-sobre-nosotros.png?height=500&width=600"
               alt="Sanarte Wellness Center"
               width={600}
               height={500}
-              className="rounded-sm shadow-md"
+              className="rounded-sm shadow-md relative z-10"
             />
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-sanarte-green opacity-50"></div>
           </div>
           <div>
             <h2 className="text-3xl font-display text-sanarte-green-dark mb-6">Sanarte Wellness Center</h2>
@@ -91,7 +94,7 @@ export default function Home() {
       </section>
 
       {/* Services Catalog */}
-      <section className="pt-24 pb-8 px-4 md:px-8 max-w-6xl mx-auto">
+      <section className="py-16 px-4 md:px-8 max-w-6xl mx-auto">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-display text-sanarte-green-dark mb-12 text-center">Catálogo de servicios</h2>
 
@@ -113,13 +116,17 @@ export default function Home() {
       </section>
 
       {/* Map Section */}
-      <section className="py-20 bg-white">
-        <div className="pt-24 pb-8 px-4 md:px-8 max-w-6xl mx-auto">
+      <section className="py-16 bg-white">
+        <div className="py-8 px-4 md:px-8 max-w-6xl mx-auto">
           <div className="flex items-center justify-center mb-10">
-            <MapPin className="text-sanarte-green mr-3" />
-            <h2 className="text-2xl font-display text-sanarte-green-dark">Encuéntranos</h2>
+            <div className="inline-flex items-center">
+              <div className="h-px w-8 bg-sanarte-green mr-4"></div>
+              <MapPin className="text-sanarte-green mr-3" />
+              <h2 className="text-2xl font-display text-sanarte-green-dark">Encuéntranos</h2>
+              <div className="h-px w-8 bg-sanarte-green ml-4"></div>
+            </div>
           </div>
-          <div className="h-[400px] w-full bg-stone-200 overflow-hidden">
+          <div className="h-[400px] w-full bg-stone-200 overflow-hidden shadow-md rounded-sm">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.6639927036647!2d-77.03690492394826!3d-12.09787914610701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c842d7adb7cd%3A0x1b5b57796410f1c0!2sCalle%20Chinch%C3%B3n%20855%2C%20San%20Isidro%2015073%2C%20Peru!5e0!3m2!1sen!2sus!4v1712431234567!5m2!1sen!2sus"
               width="100%"
@@ -165,9 +172,15 @@ const services = [
 
 function ServiceCard({ title, image }: { title: string; image: string }) {
   return (
-    <div className="group overflow-hidden">
+    <div className="group overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg rounded-sm">
       <div className="relative h-80">
-        <Image src={image || "/placeholder.svg"} alt={title} fill className="object-cover" />
+        <Image
+          src={image || "/placeholder.svg"}
+          alt={title}
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </div>
       <div className="bg-sanarte-beige-dark p-4 text-center">
         <h3 className="font-display text-lg">{title}</h3>

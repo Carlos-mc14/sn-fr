@@ -7,7 +7,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 export function SiteHeader() {
   return (
-    <header className="w-full bg-sanarte-green-dark">
+    <header className="w-full bg-sanarte-green-dark sticky top-0 z-50 shadow-md">
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
         <Link href="/" className="flex items-center">
           <Image
@@ -21,25 +21,25 @@ export function SiteHeader() {
         <nav className="hidden md:flex items-center space-x-12">
           <Link
             href="/"
-            className="text-white hover:text-sanarte-beige transition-colors duration-300 font-body tracking-wide text-sm uppercase"
+            className="text-white hover:text-sanarte-beige transition-colors duration-300 font-body tracking-wide text-sm uppercase relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:w-0 after:bg-sanarte-beige after:transition-all hover:after:w-full"
           >
             Inicio
           </Link>
           <Link
             href="/servicios"
-            className="text-white hover:text-sanarte-beige transition-colors duration-300 font-body tracking-wide text-sm uppercase"
+            className="text-white hover:text-sanarte-beige transition-colors duration-300 font-body tracking-wide text-sm uppercase relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:w-0 after:bg-sanarte-beige after:transition-all hover:after:w-full"
           >
             Servicios
           </Link>
           <Link
             href="/nosotros"
-            className="text-white hover:text-sanarte-beige transition-colors duration-300 font-body tracking-wide text-sm uppercase"
+            className="text-white hover:text-sanarte-beige transition-colors duration-300 font-body tracking-wide text-sm uppercase relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:w-0 after:bg-sanarte-beige after:transition-all hover:after:w-full"
           >
             Nosotros
           </Link>
           <Link
             href="/contacto"
-            className="text-white hover:text-sanarte-beige transition-colors duration-300 font-body tracking-wide text-sm uppercase"
+            className="text-white hover:text-sanarte-beige transition-colors duration-300 font-body tracking-wide text-sm uppercase relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:w-0 after:bg-sanarte-beige after:transition-all hover:after:w-full"
           >
             Contacto
           </Link>
